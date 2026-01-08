@@ -641,7 +641,9 @@ void loop() {
 
 
 ### 6.2. **Kode Intergrasi IoT dengan Blynk**
- Sensor gas digunakan pada simulator Wokwi karena **sensor air tidak tersedia di lingkungan simulator**. Sensor gas dipilih karena sama-sama menghasilkan output analog sehingga logika sistem tetap dapat diterapkan. Pada implementasi nyata, sensor gas diganti dengan sensor air tanpa mengubah alur program utama.
+ Sensor gas digunakan pada simulator Wokwi karena **sensor air tidak tersedia di lingkungan simulator**. Sensor gas dipilih karena sama-sama menghasilkan output analog sehingga logika sistem tetap dapat diterapkan. Pada implementasi nyata, sensor gas diganti dengan sensor air tanpa mengubah alur program utama.Sensor DHT 11 tidak ada disimulator Wokwi maka menggunakan DHT 22.
+ <img width="1643" height="910" alt="Screenshot 2026-01-08 233711" src="https://github.com/user-attachments/assets/70cb9986-3c5e-4479-bd0b-52aeb7c6a407" />
+
 
 ```cpp
 define BLYNK_PRINT Serial
