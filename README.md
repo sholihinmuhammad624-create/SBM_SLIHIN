@@ -111,6 +111,9 @@ void loop() {
 | RH ≥ 85%       | Terdeteksi | -       | Responsif |
 
 ---
+![WhatsApp Image 2026-01-08 at 17 37 33](https://github.com/user-attachments/assets/81887958-afa0-40d7-a7ce-3a7e012301f3)
+<img width="1916" height="996" alt="Screenshot 2025-12-05 160147" src="https://github.com/user-attachments/assets/404e6b33-3fc6-4c00-91c5-3b9a0ca722b9" />
+
 
 ### 5.2 Pengujian Sensor Cahaya (LDR)
 
@@ -143,6 +146,9 @@ void loop() {
 | Terang  | 2001–4095    | Cerah    |
 
 ---
+<img width="1247" height="956" alt="Screenshot 2025-12-11 171558" src="https://github.com/user-attachments/assets/e0c2572c-4333-48e3-8aac-09ec7942cf98" />
+![WhatsApp Image 2026-01-08 at 21 54 51](https://github.com/user-attachments/assets/ecf0f56c-d12b-442f-98d1-19e6e43606aa)
+
 
 ### 5.3 Pengujian Water Sensor
 
@@ -173,6 +179,7 @@ void loop() {
 | Basah   | ≥160  | Terdeteksi |
 
 ---
+![WhatsApp Image 2026-01-08 at 17 37 33](https://github.com/user-attachments/assets/bfcf51e7-b547-4054-805e-8be0c6991025)
 
 ### 5.4 Pengujian RTC DS3231
 
@@ -205,6 +212,9 @@ void loop() {
 | Parameter     | Hasil           | Status |
 | ------------- | --------------- | ------ |
 | Akurasi waktu | ±1 detik/24 jam | Akurat |
+<img width="1273" height="1006" alt="Screenshot 2025-12-05 161428" src="https://github.com/user-attachments/assets/a7bcaf30-a69e-488b-b297-7dc5445ebbc1" />
+
+![WhatsApp Image 2026-01-08 at 17 37 33](https://github.com/user-attachments/assets/1441c75b-cf74-4da3-97ba-489e0a5fb00e)
 
 ---
 
@@ -300,6 +310,9 @@ void loop() {
 | 8  | RTC          | Sinkron waktu     | Sama dengan waktu aktual | Akurat     |
 
 ---
+![WhatsApp Image 2026-01-07 at 15 39 15](https://github.com/user-attachments/assets/2abbee25-a807-4b8c-a0cd-b86feda864b0)
+
+<img width="1255" height="991" alt="Screenshot 2025-12-05 163344" src="https://github.com/user-attachments/assets/53c723b2-b620-4873-8113-0f3cb0c0bf95" />
 
 ### E. Pembahasan Hasil Integrasi Input
 
@@ -353,6 +366,7 @@ void loop() {
 LED menyala dan mati secara bergantian sesuai perintah program, menandakan pin output berfungsi dengan baik.
 
 ---
+![WhatsApp Image 2026-01-08 at 21 54 51](https://github.com/user-attachments/assets/2bb0d178-a20f-4932-81af-0604db24770e)
 
 ### 5.8 Pengujian Servo Motor
 
@@ -387,6 +401,8 @@ void loop() {
 Servo bergerak sesuai sudut yang diperintahkan tanpa gangguan, menandakan kontrol PWM berjalan normal.
 
 ---
+<img width="1919" height="1007" alt="Screenshot 2025-11-20 140313" src="https://github.com/user-attachments/assets/5cb6a5f7-c6d9-42b2-809b-a98b79226e3b" />
+
 
 ### 7.4 Pengujian Buzzer
 
@@ -458,11 +474,12 @@ void loop() {
 
 **Penjelasan:**
 LCD berhasil menampilkan karakter pada kedua baris dengan jelas, menandakan komunikasi I2C berjalan normal.
+![WhatsApp Image 2026-01-08 at 22 03 42](https://github.com/user-attachments/assets/d02b443a-fac8-404f-a37f-7aef49963798)
 
 ---
 ## 6.Pembuatan Alat
 ### 6.1 **Kode Konvensional**
-```
+```cpp
 #include <Wire.h>
 #include <RTClib.h>
 #include <DHT.h>
@@ -619,11 +636,14 @@ void loop() {
 - `Servo` → buka/tutup jemuran (0°/140°).  
 - `LCD I2C` → menampilkan **suhu, kelembapan, kondisi**, dan jam.
 
+<img width="1240" height="854" alt="Screenshot 2026-01-08 150901" src="https://github.com/user-attachments/assets/3c86b4bc-7f69-4de2-b289-4e04e80cc56c" />
+<img width="1247" height="858" alt="Screenshot 2026-01-08 150838" src="https://github.com/user-attachments/assets/6664a208-ea74-471f-9de5-9727a939bca5" />
+
 
 ### 6.2. **Kode Intergrasi IoT dengan Blynk**
  Sensor gas digunakan pada simulator Wokwi karena **sensor air tidak tersedia di lingkungan simulator**. Sensor gas dipilih karena sama-sama menghasilkan output analog sehingga logika sistem tetap dapat diterapkan. Pada implementasi nyata, sensor gas diganti dengan sensor air tanpa mengubah alur program utama.
 
-```
+```cpp
 define BLYNK_PRINT Serial
 // ===== BLYNK =====
 #define BLYNK_TEMPLATE_ID "TMPL6K8uPbBR8"
